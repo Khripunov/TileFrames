@@ -1,0 +1,22 @@
+.group-toggle:focus-visible,
+.tile:focus-visible {
+  outline: 2px solid #fef9c3;
+  outline-offset: 3px;
+}
+
+.tile-grid:has(.tile-large) {
+  grid-auto-rows: var(--tile-base);
+}
+
+.tile {
+  isolation: isolate;
+}
+
+.tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
